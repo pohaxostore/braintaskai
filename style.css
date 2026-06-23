@@ -106,6 +106,13 @@ nav a:hover{
     white-space:nowrap;
     flex-shrink:0;
 }
+.mobile-logo{
+    display:none;
+}
+
+.desktop-logo{
+    display:inline;
+}
 
 /* ===== HERO ===== */
 
@@ -495,3 +502,14 @@ footer{
     object-fit:contain;
     border-radius:50%;
     }
+@media(max-width:768px){
+
+    .desktop-logo{
+        display:none;
+    }
+
+    .mobile-logo{
+        display:inline;
+    }
+
+        }

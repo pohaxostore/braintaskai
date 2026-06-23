@@ -39,14 +39,26 @@ header .container{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    min-height:80px;
+    min-height:90px;
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
     text-decoration:none;
-    font-size:1.5rem;
-    font-weight:800;
     color:#111827;
+    font-size:1.3rem;
+    font-weight:800;
+}
+
+.logo img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
 }
 
 nav{

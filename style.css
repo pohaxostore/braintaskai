@@ -81,8 +81,29 @@ nav a:hover{
 /* ===== HERO ===== */
 
 #hero{
+    position:relative;
+    overflow:hidden;
     padding:120px 0;
-    text-align:center;
+}
+
+#hero::before{
+    content:"";
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    top:-150px;
+    right:-150px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(124,58,237,.15),
+        transparent 70%
+    );
+
+    pointer-events:none;
 }
 
 .hero-badge{
@@ -95,14 +116,11 @@ nav a:hover{
     font-weight:700;
     margin-bottom:25px;
 }
-
 #hero h1{
-    max-width:850px;
-    margin:auto;
-    font-size:4.5rem;
+    font-size:4.2rem;
     line-height:1.05;
-    font-weight:800;
-    margin-bottom:25px;
+    margin-bottom:24px;
+}
 }
 
 #hero p{
@@ -119,7 +137,34 @@ nav a:hover{
     gap:15px;
     margin-bottom:40px;
 }
+/* HERO LAYOUT */
 
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:520px;
+    height:auto;
+    filter:drop-shadow(
+        0 25px 60px rgba(124,58,237,.35)
+    );
+    }
 .btn-primary,
 .btn-secondary{
     text-decoration:none;
@@ -388,3 +433,19 @@ footer{
     }
 
   }
+@media(max-width:768px){
+
+    .hero-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-image{
+        order:-1;
+    }
+
+    .hero-image img{
+        max-width:320px;
+    }
+
+    }

@@ -11,12 +11,18 @@ html{
 }
 
 body{
-    font-family:Inter,sans-serif;
+    font-family: "Inter", sans-serif;
     background:#f8faff;
     color:#111827;
     line-height:1.7;
+
+    overflow-x:hidden;
 }
 
+img{
+    max-width:100%;
+    display:block;
+}
 /* ===== CONTAINER ===== */
 
 .container{
@@ -47,7 +53,7 @@ header .container{
 .logo{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
 
     text-decoration:none;
     color:#111827;
@@ -55,8 +61,7 @@ header .container{
     font-size:1.2rem;
     font-weight:800;
 
-    white-space:nowrap;
-    flex:1;
+    flex-shrink:0;
 }
 
 .logo img{
@@ -73,44 +78,82 @@ header .container{
 
 nav{
     display:flex;
-    gap:30px;
+    align-items:center;
+    gap:28px;
 }
 
 nav a{
+    position:relative;
+
     text-decoration:none;
+
     color:#374151;
+
     font-weight:600;
+
     transition:.3s;
 }
 
 nav a:hover{
     color:#6d5dfc;
 }
+nav a::after{
 
-.nav-btn{
-    position: relative;
-    overflow: hidden;
+content:"";
 
-    padding: 14px 24px;
+position:absolute;
 
-    border-radius: 16px;
+left:0;
 
-    text-decoration: none;
+bottom:-6px;
 
-    color: #fff;
+width:0;
 
-    font-weight: 700;
+height:2px;
 
-    background: linear-gradient(135deg,#7c3aed,#2563eb);
+background:#6d5dfc;
 
-    transition: all .35s ease;
+transition:.3s;
 
-    box-shadow: 0 10px 30px rgba(124,58,237,.25);
 }
 
+nav a:hover::after{
+
+width:100%;
+
+}
+nav a:hover{
+    color:#6d5dfc;
+}
+
+.nav-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 24px;
+
+    border-radius:16px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-weight:700;
+
+    background:linear-gradient(135deg,#7c3aed,#2563eb);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        filter .3s ease;
+
+    box-shadow:0 10px 30px rgba(124,58,237,.25);
+}
 .nav-btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 18px 45px rgba(124,58,237,.35);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(124,58,237,.30);
+    filter: brightness(1.05);
 }
 .mobile-logo{
     display:none;

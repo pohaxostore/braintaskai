@@ -240,25 +240,19 @@ rotate(-1deg);
     margin-top:30px;
 }
 
-.btn-primary{
-    display:inline-block;
-    padding:16px 28px;
-    border-radius:16px;
-    background:linear-gradient(135deg,#7c3aed,#2563eb);
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
+.btn-primary,
+.btn-secondary{
+    transition:.3s ease;
 }
 
-.btn-secondary{
-    display:inline-block;
-    padding:16px 28px;
-    border-radius:16px;
-    border:1px solid #dbe4ff;
-    background:#fff;
-    color:#111827;
-    text-decoration:none;
-    font-weight:700;
+.btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px rgba(124,58,237,.25);
+}
+
+.btn-secondary:hover{
+    transform:translateY(-4px);
+    background:#f8faff;
 }
 
 .hero-points{

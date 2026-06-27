@@ -979,4 +979,27 @@ font-size:3rem;
 
 }
 
+
+    @media (max-width:768px){
+
+    nav{
+        display:none;
     }
+
+    .desktop-logo{
+        display:none;
+    }
+
+    .mobile-logo{
+        display:inline;
+    }
+
+    .nav-btn{
+
+        padding:10px 16px;
+
+        font-size:.9rem;
+
+    }
+
+                           }

@@ -414,6 +414,18 @@ nav a:hover{
 /* ===== SECTIONS ===== */
 
 section{
+    padding:90px 0;
+}
+
+#hero{
+    padding:120px 0 90px;
+}
+
+#intro{
+    padding:100px 0;
+}
+
+#services{
     padding:100px 0;
 }
 

@@ -1,0 +1,63 @@
+/* =========================================
+   Braintask Studio Design System v1.0
+========================================= */
+
+:root{
+
+  /* ===== Colors ===== */
+
+  --primary: #7C3AED;
+  --primary-dark: #6D28D9;
+
+  --secondary: #2563EB;
+
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+
+  --text: #0F172A;
+  --text-light: #64748B;
+
+  --border: #E2E8F0;
+
+  --success: #10B981;
+
+  /* ===== Typography ===== */
+
+  --font-family: "Inter", sans-serif;
+
+  --fs-sm: .9rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.2rem;
+  --fs-xl: 2.5rem;
+  --fs-hero: 4.5rem;
+
+  /* ===== Spacing ===== */
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+
+  /* ===== Border Radius ===== */
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+
+  /* ===== Shadows ===== */
+
+  --shadow-sm: 0 8px 20px rgba(15,23,42,.05);
+  --shadow-md: 0 15px 40px rgba(15,23,42,.08);
+  --shadow-lg: 0 25px 60px rgba(15,23,42,.12);
+
+  /* ===== Container ===== */
+
+  --container: 1200px;
+
+  /* ===== Transition ===== */
+
+  --transition: .3s ease;
+  }

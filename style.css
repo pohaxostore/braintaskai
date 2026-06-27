@@ -1,4 +1,45 @@
-/* ===== RESET ===== */
+/*==================================================
+    Braintask Studio
+    Version: 2.0
+==================================================*/
+
+
+/*==================================================
+    VARIABLES
+==================================================*/
+
+:root{
+
+    /* Colors */
+
+    --primary:#7c3aed;
+    --secondary:#2563eb;
+
+    --text:#111827;
+    --text-light:#6b7280;
+
+    --background:#f8faff;
+    --white:#ffffff;
+
+    --border:#e5e7eb;
+
+    /* Radius */
+
+    --radius-sm:12px;
+    --radius-md:18px;
+    --radius-lg:24px;
+
+    /* Shadow */
+
+    --shadow:
+        0 18px 40px rgba(0,0,0,.08);
+
+}
+
+
+/*==================================================
+    RESET
+==================================================*/
 
 *{
     margin:0;
@@ -11,157 +52,245 @@ html{
 }
 
 body{
-    font-family: "Inter", sans-serif;
-    background:#f8faff;
-    color:#111827;
+
+    font-family:"Inter",sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
     line-height:1.7;
 
     overflow-x:hidden;
+
 }
 
 img{
-    max-width:100%;
     display:block;
+    max-width:100%;
 }
-/* ===== CONTAINER ===== */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea{
+    font:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+
+/*==================================================
+    GLOBAL
+==================================================*/
 
 .container{
+
     width:min(1200px,92%);
+
     margin:0 auto;
+
 }
 
-/* ===== HEADER ===== */
+section{
+
+    padding:90px 0;
+
+}
+
+h1,
+h2,
+h3{
+
+    line-height:1.15;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+}
+/*==================================================
+    HEADER
+==================================================*/
 
 header{
+
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.92);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #e5e7eb;
-    box-shadow:0 10px 35px rgba(0,0,0,.04);
+
+    background:rgba(255,255,255,.90);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.04);
+
 }
 
 header .container{
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
-    min-height:80px;
-    gap:12px;
+
+    height:80px;
+
 }
 
+/* ---------- Logo ---------- */
+
 .logo{
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
 
-    text-decoration:none;
-    color:#111827;
-
     font-size:1.2rem;
+
     font-weight:800;
 
+    color:var(--text);
+
     flex-shrink:0;
+
 }
 
 .logo img{
-    width:42px;
-    height:42px;
-    border-radius:50%;
+
+    width:44px;
+
+    height:44px;
+
     object-fit:cover;
-    flex-shrink:0;
+
+    border-radius:50%;
+
 }
 
-.logo span{
-    white-space:nowrap;
-}
+/* ---------- Navigation ---------- */
 
 nav{
+
     display:flex;
+
     align-items:center;
-    gap:28px;
+
+    gap:30px;
+
 }
 
 nav a{
+
     position:relative;
-
-    text-decoration:none;
-
-    color:#374151;
 
     font-weight:600;
 
+    color:var(--text-light);
+
     transition:.3s;
+
 }
 
 nav a:hover{
-    color:#6d5dfc;
+
+    color:var(--primary);
+
 }
+
 nav a::after{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-left:0;
+    left:0;
 
-bottom:-6px;
+    bottom:-8px;
 
-width:0;
+    width:0;
 
-height:2px;
+    height:2px;
 
-background:#6d5dfc;
+    background:var(--primary);
 
-transition:.3s;
+    transition:.3s;
 
 }
 
 nav a:hover::after{
 
-width:100%;
+    width:100%;
 
 }
-nav a:hover{
-    color:#6d5dfc;
-}
+
+/* ---------- CTA ---------- */
 
 .nav-btn{
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
 
     padding:14px 24px;
 
     border-radius:16px;
 
-    text-decoration:none;
-
     color:#fff;
 
     font-weight:700;
 
-    background:linear-gradient(135deg,#7c3aed,#2563eb);
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:0 12px 30px rgba(124,58,237,.25);
 
     transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        filter .3s ease;
+        transform .3s,
+        box-shadow .3s;
 
-    box-shadow:0 10px 30px rgba(124,58,237,.25);
 }
+
 .nav-btn:hover{
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 20px 50px rgba(124,58,237,.30);
-    filter: brightness(1.05);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 18px 40px rgba(124,58,237,.35);
+
 }
+
+/* ---------- Mobile Logo ---------- */
+
 .mobile-logo{
+
     display:none;
+
 }
 
 .desktop-logo{
+
     display:inline;
-}
+
+    }
+
 
 
 /*==============================

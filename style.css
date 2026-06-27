@@ -193,9 +193,8 @@ nav a:hover{
 
 .hero-image img{
     width:100%;
-    max-width:560px;
+    max-width:650px;
     border-radius:20px;
-    transition:.4s;
 }
 
 .hero-image img:hover{

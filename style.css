@@ -1397,3 +1397,35 @@ padding:24px;
 }
 
 }
+/*=========================================
+        Scroll Animation
+=========================================*/
+
+.service-card,
+.step,
+.project-card,
+.benefit-card,
+.pricing-card,
+.faq-item,
+.hero-text,
+.hero-visual,
+.stat{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:
+opacity .8s ease,
+transform .8s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+

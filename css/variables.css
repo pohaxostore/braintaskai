@@ -1,0 +1,14 @@
+/* =============================== VARIABLES =============================== */ 
+:root{ 
+  --primary:#7C3AED;
+  --secondary:#2563EB;
+  --accent:#A855F7; 
+  --dark:#0F172A;
+  --text:#1E293B;
+  --gray:#64748B;
+  --white:#FFFFFF;
+  --light:#F8FAFC;
+  --border:#E2E8F0;
+  --radius:22px; --transition:.35s ease;
+  --shadow: 0 20px 45px rgba(15,23,42,.08);
+  --gradient: linear-gradient( 135deg, #7C3AED, #2563EB ); }

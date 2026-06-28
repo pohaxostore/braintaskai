@@ -1,14 +1,111 @@
-/* =============================== VARIABLES =============================== */ 
-:root{ 
-  --primary:#7C3AED;
-  --secondary:#2563EB;
-  --accent:#A855F7; 
-  --dark:#0F172A;
-  --text:#1E293B;
-  --gray:#64748B;
-  --white:#FFFFFF;
-  --light:#F8FAFC;
-  --border:#E2E8F0;
-  --radius:22px; --transition:.35s ease;
-  --shadow: 0 20px 45px rgba(15,23,42,.08);
-  --gradient: linear-gradient( 135deg, #7C3AED, #2563EB ); }
+/*==================================================
+    BraintaskAI
+    VARIABLES
+==================================================*/
+
+:root{
+
+    /*==============================
+        BRAND COLORS
+    ==============================*/
+
+    --primary:#7C3AED;
+    --primary-dark:#6D28D9;
+
+    --secondary:#2563EB;
+    --secondary-dark:#1D4ED8;
+
+    --accent:#A855F7;
+
+    /*==============================
+        BACKGROUND COLORS
+    ==============================*/
+
+    --background:#F8FAFC;
+    --surface:#FFFFFF;
+    --surface-alt:#F1F5F9;
+
+    --dark:#0F172A;
+    --dark-light:#1E293B;
+
+    /*==============================
+        TEXT COLORS
+    ==============================*/
+
+    --text:#1E293B;
+    --text-light:#64748B;
+
+    --white:#FFFFFF;
+
+    /*==============================
+        BORDER
+    ==============================*/
+
+    --border:#E2E8F0;
+
+    /*==============================
+        GRADIENTS
+    ==============================*/
+
+    --gradient-primary:
+    linear-gradient(
+        135deg,
+        #7C3AED,
+        #2563EB
+    );
+
+    --gradient-secondary:
+    linear-gradient(
+        135deg,
+        #A855F7,
+        #3B82F6
+    );
+
+    /*==============================
+        BORDER RADIUS
+    ==============================*/
+
+    --radius-xs:10px;
+    --radius-sm:14px;
+    --radius-md:20px;
+    --radius-lg:28px;
+    --radius-xl:40px;
+
+    /*==============================
+        SHADOWS
+    ==============================*/
+
+    --shadow-sm:
+    0 8px 20px rgba(15,23,42,.06);
+
+    --shadow-md:
+    0 18px 45px rgba(15,23,42,.08);
+
+    --shadow-lg:
+    0 30px 70px rgba(15,23,42,.12);
+
+    /*==============================
+        TRANSITIONS
+    ==============================*/
+
+    --transition-fast:.25s ease;
+
+    --transition:
+    .35s ease;
+
+    --transition-slow:
+    .6s ease;
+
+    /*==============================
+        CONTAINER
+    ==============================*/
+
+    --container:1200px;
+
+    /*==============================
+        HEADER
+    ==============================*/
+
+    --header-height:84px;
+
+  }

@@ -1,19 +1,218 @@
+/*==================================================
+    BraintaskAI
+    RESET & GLOBAL
+==================================================*/
 
-/* =============================== GOOGLE FONT =============================== */ 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'); 
-/* =============================== RESET =============================== */ 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box; 
-} 
-html{ 
-  scroll-behavior:smooth; 
-} 
+/*==============================
+    GOOGLE FONT
+==============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/*==============================
+    RESET
+==============================*/
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
 body{
-  font-family:   'Inter',sans-serif;
-  background:var(--light);
-  color:var(--text);
-  line-height:1.7;
-  overflow-x:hidden;
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+/*==============================
+    SELECTION
+==============================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+}
+
+/*==============================
+    IMAGES
+==============================*/
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/*==============================
+    LINKS
+==============================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:var(--transition);
+
+}
+
+/*==============================
+    LISTS
+==============================*/
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+/*==============================
+    BUTTONS
+==============================*/
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font:inherit;
+
+}
+
+/*==============================
+    INPUTS
+==============================*/
+
+input,
+textarea,
+select{
+
+    font:inherit;
+
+    outline:none;
+
+    border:none;
+
+    background:none;
+
+}
+
+/*==============================
+    CONTAINER
+==============================*/
+
+.container{
+
+    width:min(var(--container),92%);
+
+    margin:auto;
+
+}
+
+/*==============================
+    SECTIONS
+==============================*/
+
+section{
+
+    padding:110px 0;
+
+}
+
+/*==============================
+    HEADINGS
+==============================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    color:var(--dark);
+
+    line-height:1.15;
+
+    font-weight:800;
+
+}
+
+/*==============================
+    PARAGRAPHS
+==============================*/
+
+p{
+
+    color:var(--text-light);
+
+}
+
+/*==============================
+    SCROLLBAR
+==============================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--background);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
 }

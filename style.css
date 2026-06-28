@@ -1429,3 +1429,30 @@ transform:translateY(0);
 
 }
 
+/*=========================================
+        Scroll Progress Bar
+=========================================*/
+
+#progress-bar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:4px;
+
+width:0;
+
+z-index:99999;
+
+background:linear-gradient(
+90deg,
+#7c3aed,
+#2563eb
+);
+
+transition:width .1s linear;
+
+}

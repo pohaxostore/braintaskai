@@ -1511,3 +1511,88 @@ visibility:visible;
 transform:translateY(-4px);
 
    }
+/*=========================================
+            Aurora Background
+=========================================*/
+
+.aurora-bg{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+.aurora-bg span{
+
+    position:absolute;
+
+    width:550px;
+
+    height:550px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.22;
+
+    animation:auroraMove 24s ease-in-out infinite alternate;
+
+}
+
+.aurora-bg span:nth-child(1){
+
+    background:#7c3aed;
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.aurora-bg span:nth-child(2){
+
+    background:#2563eb;
+
+    right:-180px;
+
+    top:180px;
+
+    animation-duration:30s;
+
+}
+
+.aurora-bg span:nth-child(3){
+
+    background:#38bdf8;
+
+    bottom:-180px;
+
+    left:35%;
+
+    animation-duration:36s;
+
+}
+
+@keyframes auroraMove{
+
+    from{
+
+        transform:translate(0,0) scale(1);
+
+    }
+
+    to{
+
+        transform:translate(120px,-80px) scale(1.25);
+
+    }
+
+   }

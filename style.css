@@ -1601,66 +1601,10 @@ transform:translateY(-4px);
 =========================================*/
 
 .announcement-bar{
-
-    position:relative;
-
-    width:100%;
-
-    padding:12px 20px;
-
+    background:red;
+    color:white;
+    padding:20px;
     text-align:center;
-
-    font-size:.95rem;
-
-    font-weight:600;
-
-    color:#fff;
-
-    background:linear-gradient(
-        90deg,
-        #7C3AED,
-        #2563EB
-    );
-
-    overflow:hidden;
-
+    font-size:20px;
+    font-weight:bold;
 }
-
-.announcement-bar span{
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-.announcement-bar::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.18),
-        transparent
-    );
-
-    transform:translateX(-100%);
-
-    animation:shine 5s linear infinite;
-
-}
-
-@keyframes shine{
-
-    to{
-
-        transform:translateX(100%);
-
-    }
-
-           }

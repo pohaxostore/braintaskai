@@ -1,0 +1,372 @@
+/*==================================================
+    BraintaskAI
+    HERO
+==================================================*/
+
+/*==============================
+    HERO SECTION
+==============================*/
+
+#hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-top:170px;
+
+    padding-bottom:100px;
+
+}
+
+.hero-content{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    align-items:center;
+
+    gap:90px;
+
+}
+
+/*==============================
+    HERO LEFT
+==============================*/
+
+.hero-left{
+
+    position:relative;
+
+}
+
+.hero-left h1{
+
+    font-size:clamp(3rem,7vw,5.5rem);
+
+    line-height:1;
+
+    font-weight:800;
+
+    letter-spacing:-3px;
+
+    margin:30px 0;
+
+}
+
+.hero-left h1 span{
+
+    background:var(--gradient-primary);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.hero-left p{
+
+    max-width:600px;
+
+    font-size:1.15rem;
+
+    margin-bottom:45px;
+
+    color:var(--text-light);
+
+}
+
+/*==============================
+    BUTTONS
+==============================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:55px;
+
+}
+
+/*==============================
+    STATS
+==============================*/
+
+.hero-stats{
+
+    display:flex;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-stats h2{
+
+    font-size:2.2rem;
+
+    margin-bottom:6px;
+
+}
+
+.hero-stats span{
+
+    color:var(--text-light);
+
+}
+/*==============================
+    HERO RIGHT
+==============================*/
+
+.hero-right{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/*==============================
+    DASHBOARD
+==============================*/
+
+.dashboard{
+
+    width:100%;
+
+    max-width:500px;
+
+    padding:28px;
+
+}
+
+.dashboard-top{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+.circle{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+}
+
+.red{
+
+    background:#EF4444;
+
+}
+
+.yellow{
+
+    background:#F59E0B;
+
+}
+
+.green{
+
+    background:#10B981;
+
+}
+
+/*==============================
+    CHART
+==============================*/
+
+.chart{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+    height:220px;
+
+    margin-bottom:30px;
+
+}
+
+.bar{
+
+    flex:1;
+
+    border-radius:14px 14px 0 0;
+
+    background:var(--gradient-primary);
+
+    animation:bars 2.5s ease-in-out infinite alternate;
+
+}
+
+.bar1{
+
+    height:45%;
+
+}
+
+.bar2{
+
+    height:70%;
+
+}
+
+.bar3{
+
+    height:90%;
+
+}
+
+.bar4{
+
+    height:60%;
+
+}
+
+.bar5{
+
+    height:100%;
+
+}
+
+.dashboard-card{
+
+    padding:22px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.dashboard-card h3{
+
+    margin-bottom:12px;
+
+}
+
+.dashboard-card h2{
+
+    font-size:2.5rem;
+
+    color:var(--primary);
+
+    margin-bottom:8px;
+
+}
+/*==============================
+    FLOATING CARDS
+==============================*/
+
+.floating-card{
+
+    position:absolute;
+
+    padding:14px 20px;
+
+    border-radius:18px;
+
+    background:white;
+
+    box-shadow:var(--shadow-md);
+
+    font-weight:700;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+.card-one{
+
+    top:40px;
+
+    left:-30px;
+
+}
+
+.card-two{
+
+    right:-35px;
+
+    top:180px;
+
+    animation-delay:1.5s;
+
+}
+
+.card-three{
+
+    bottom:20px;
+
+    left:20px;
+
+    animation-delay:3s;
+
+}
+
+/*==============================
+    ANIMATIONS
+==============================*/
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes bars{
+
+    from{
+
+        transform:scaleY(.75);
+
+    }
+
+    to{
+
+        transform:scaleY(1);
+
+    }
+
+}

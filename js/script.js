@@ -1,103 +1,6 @@
-/*=========================================
-    Braintask Studio
-    Version 3.0
-=========================================*/
-
-/*=========================================
-    Scroll Reveal
-=========================================*/
-
-const revealElements = document.querySelectorAll(`
-.service-card,
-.step,
-.project-card,
-.benefit-card,
-.pricing-card,
-.faq-item,
-.hero-text,
-.hero-visual,
-.stat
-`);
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach((entry) => {
-
-        if (entry.isIntersecting) {
-
-            entry.target.classList.add("show");
-
-        }
-
-    });
-
-}, {
-    threshold: 0.15
-});
-
-revealElements.forEach((element) => {
-
-    observer.observe(element);
-
-});
-/*=========================================
-    Animated Counters
-=========================================*/
-
-const counters = document.querySelectorAll(".stat strong");
-
-const counterObserver = new IntersectionObserver((entries) => {
-
-    entries.forEach((entry) => {
-
-        if (!entry.isIntersecting) return;
-
-        const counter = entry.target;
-
-        const targetText = counter.innerText;
-
-        const target = parseInt(targetText);
-
-        if (isNaN(target)) return;
-
-        let current = 0;
-
-        const increment = Math.ceil(target / 60);
-
-        const updateCounter = () => {
-
-            current += increment;
-
-            if (current >= target) {
-
-                counter.innerText = targetText;
-
-            } else {
-
-                counter.innerText = current;
-
-                requestAnimationFrame(updateCounter);
-
-            }
-
-        };
-
-        updateCounter();
-
-        counterObserver.unobserve(counter);
-
-    });
-
-});
-
-counters.forEach(counter => {
-
-    counterObserver.observe(counter);
-
-});
-/*=========================================
-    Scroll Progress
-=========================================*/
+/*==================================================
+        SCROLL PROGRESS BAR
+==================================================*/
 
 const progressBar = document.getElementById("progress-bar");
 
@@ -105,18 +8,18 @@ window.addEventListener("scroll", () => {
 
     const scrollTop = window.scrollY;
 
-    const height =
+    const docHeight =
         document.documentElement.scrollHeight -
         window.innerHeight;
 
-    const progress = (scrollTop / height) * 100;
+    const progress = (scrollTop / docHeight) * 100;
 
     progressBar.style.width = progress + "%";
 
 });
-/*=========================================
-    Back To Top
-=========================================*/
+/*==================================================
+            BACK TO TOP
+==================================================*/
 
 const backToTop = document.getElementById("backToTop");
 
@@ -134,7 +37,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-backToTop.addEventListener("click", () => {
+backToTop.addEventListener("click",()=>{
 
     window.scrollTo({
 
@@ -145,3 +48,45 @@ backToTop.addEventListener("click", () => {
     });
 
 });
+/*==================================================
+                FAQ
+==================================================*/
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item=>{
+
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click",()=>{
+
+        item.classList.toggle("active");
+
+    });
+
+});
+/*==================================================
+        SCROLL REVEAL
+==================================================*/
+
+const hiddenElements = document.querySelectorAll(
+
+".service-card,.project-card,.step,.testimonial-card,.result-card,.faq-item"
+
+);
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{threshold:.15});
+
+hiddenElements.forEach(el=>observer.observe(el));

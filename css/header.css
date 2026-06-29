@@ -76,7 +76,25 @@
 .logo-text p{
     margin:0;
     }
+.brand-logo{
+    width:58px;
+    height:58px;
+    transition:.4s ease;
+}
 
+.logo:hover .brand-logo{
+    transform:rotate(8deg) scale(1.08);
+}
+
+.brand-logo circle,
+.brand-logo line{
+    transition:.4s;
+}
+
+.logo:hover circle,
+.logo:hover line{
+    filter:drop-shadow(0 0 10px rgba(124,58,237,.45));
+                       }
 
 /*==============================
     NAVIGATION

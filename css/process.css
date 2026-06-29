@@ -1,0 +1,177 @@
+/*==================================================
+    PROCESS
+==================================================*/
+
+#process{
+
+    position:relative;
+
+}
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:50px;
+
+    position:relative;
+
+}
+
+/* الخط الذي يربط المراحل */
+
+.process-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:38px;
+
+    left:12%;
+
+    width:76%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #7C3AED,
+        #2563EB
+    );
+
+    border-radius:999px;
+
+    z-index:0;
+
+}
+
+.step{
+
+    position:relative;
+
+    z-index:1;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    border-radius:26px;
+
+    padding:35px 28px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 20px 45px rgba(15,23,42,.08);
+
+}
+
+.step:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 35px 60px rgba(124,58,237,.15);
+
+}
+
+.step-number{
+
+    width:76px;
+
+    height:76px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        #7C3AED,
+        #2563EB
+    );
+
+    color:#fff;
+
+    font-size:1.4rem;
+
+    font-weight:800;
+
+    box-shadow:0 12px 30px rgba(124,58,237,.25);
+
+}
+
+.step h3{
+
+    margin-bottom:15px;
+
+    font-size:1.4rem;
+
+    color:var(--dark);
+
+}
+
+.step p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+}
+
+.step:hover .step-number{
+
+    transform:scale(1.08) rotate(-8deg);
+
+    transition:.35s;
+
+}
+
+/*==============================
+    Responsive
+==============================*/
+
+@media(max-width:992px){
+
+.process-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.process-grid::before{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.process-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.step{
+
+padding:30px 24px;
+
+}
+
+      }
